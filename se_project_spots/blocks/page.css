@@ -1,0 +1,18 @@
+.page {
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #ffffff;
+}page.css — styles for the .page block (BEM flat file)
+   For now: background color and font-family using Poppins with fallbacks.
+   Add more page-related styles here as the project grows.
+*/
+
+.page {
+  background: #FCF5E5;
+  /* Poppins with fallbacks */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}

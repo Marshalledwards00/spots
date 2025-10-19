@@ -1,0 +1,52 @@
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+
+@import url('../blocks/page.css');
+@import url('../blocks/header.css');
+@import url('../blocks/nav.css');
+@import url('../blocks/menu.css');
+@import url('../blocks/card.css');
+@import url('../blocks/recipes.css');
+@import url('../blocks/reservation.css');
+@import url('../blocks/form.css');
+@import url('../blocks/about.css');
+@import url('../blocks/footer.css');
+    --bg: #fffdf9;
+    --text: #2b2b2b;
+    --accent: #b5651d;
+  }
+
+  *{box-sizing:border-box}
+
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* Headings should use Noto Serif */
+  h1,h2,h3,h4{
+    font-family: 'Noto Serif', 'Times New Roman', serif;
+  }
+
+  .header{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+  }
+
+  .logo{
+    width:64px;height:64px;background:var(--accent);border-radius:8px;
+  }
+
+  .main{
+    min-height:60vh;
+  }
+
+  .hero{height:240px;background-image:url('../images/background_header.svg');background-size:cover;background-position:center;border-radius:8px}
+
+  /* Utility: font-test display */
+  .font-test{font-size:14px;color:#555}
