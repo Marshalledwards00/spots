@@ -1,0 +1,35 @@
+.page {
+  margin: 0 auto;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #fcf5e5;
+  cursor: auto;
+}
+
+.page button,
+.page a,
+.page [role="button"],
+.page input[type="submit"],
+.page input[type="button"] {
+  cursor: pointer;
+}
+
+.page input,
+.page textarea {
+  cursor: text;
+}
+
+.page__content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__section {
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+}
