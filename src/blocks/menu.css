@@ -1,0 +1,52 @@
+.menu {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.menu__title {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+}
+
+.menu__subtitle {
+  max-width: 780px;
+  margin: 24px auto 0;
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.menu__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
+  margin: 100px auto;
+  max-width: 1300px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    padding: 60px 0;
+  }
+
+  .menu__title {
+    font-size: 32px;
+    line-height: 40px;
+    padding: 0 20px;
+  }
+
+  .menu__subtitle {
+    padding: 0 20px;
+  }
+
+  .menu__cards {
+    margin: 60px auto;
+  }
+}

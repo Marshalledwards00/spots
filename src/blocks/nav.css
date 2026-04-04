@@ -1,0 +1,45 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px 0;
+}
+
+.nav__logo {
+  width: 105px;
+  height: 39px;
+}
+
+.nav__links {
+  display: flex;
+  column-gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #2F80ED;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 20px 20px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__links {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
