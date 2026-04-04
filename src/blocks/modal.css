@@ -368,6 +368,48 @@ width: 22.63px;
 }
 
 @media (max-width: 420px) {
+  #edit-profile-modal .modal__container {
+    max-width: 300px;
+    padding: 22px 20px;
+    border-radius: 8px;
+  }
+
+  #edit-profile-modal .modal__title {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  #edit-profile-modal .modal__field {
+    margin-bottom: 24px;
+    gap: 8px;
+  }
+
+  #edit-profile-modal .modal__input {
+    min-height: 48px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  #edit-profile-modal .modal__actions {
+    margin-top: 6px;
+    justify-content: stretch;
+  }
+
+  #edit-profile-modal .modal__save-btn {
+    width: 100%;
+    min-height: 52px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  #edit-profile-modal .modal__close {
+    top: -44px;
+    right: 0;
+    width: 26px;
+    height: 26px;
+  }
+
   #edit-avatar-modal .modal__container {
     max-width: 296px;
     padding: 20px 14px;

@@ -12,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
     publicPath: '',
+  },
   mode: 'development',
   devtool: 'inline-source-map',
   stats: 'errors-only',

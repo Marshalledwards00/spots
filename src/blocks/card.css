@@ -168,9 +168,17 @@
 }
 
 @media screen and (max-width: 627px) {
+    .card {
+        width: 100%;
+    }
+
     .card__image {
         max-width: 100%;
         aspect-ratio: 1 / 1;
         height: auto;
+    }
+
+    .card__title {
+        max-width: 240px;
     }
 }

@@ -4,6 +4,15 @@ class Api {
     this._headers = headers;
   }
 
+  _request(endpoint, options = {}) {
+    const finalOptions = {
+      headers: this._headers,
+      ...options
+    };
+
+    return fetch(`${this._baseUrl}${endpoint}`, finalOptions).then((res) => this._checkResponse(res));
+  }
+
   _checkResponse(res) {
     if (res.ok) {
       return res.json();
@@ -13,43 +22,36 @@ class Api {
   }
 
   getInitialCards() {
-    return fetch(`${this._baseUrl}/cards`, {
-      headers: this._headers
-    }).then((res) => this._checkResponse(res));
+    return this._request('/cards');
   }
 
   getUserInfo() {
-    return fetch(`${this._baseUrl}/users/me`, {
-      headers: this._headers
-    }).then((res) => this._checkResponse(res));
+    return this._request('/users/me');
   }
 
   editUserInfo(data) {
-    return fetch(`${this._baseUrl}/users/me`, {
+    return this._request('/users/me', {
       method: 'PATCH',
-      headers: this._headers,
       body: JSON.stringify({
         name: data.name,
         about: data.about
       })
-    }).then((res) => this._checkResponse(res));
+    });
   }
 
   editAvatar(avatar) {
-    return fetch(`${this._baseUrl}/users/me/avatar`, {
+    return this._request('/users/me/avatar', {
       method: 'PATCH',
-      headers: this._headers,
       body: JSON.stringify({
         avatar: avatar
       })
-    }).then((res) => this._checkResponse(res));
+    });
   }
 
   removeCard(id) {
-    return fetch(`${this._baseUrl}/cards/${id}`, {
-      method: 'DELETE',
-      headers: this._headers
-    }).then((res) => this._checkResponse(res));
+    return this._request(`/cards/${id}`, {
+      method: 'DELETE'
+    });
   }
 
   deleteCard(id) {
@@ -57,21 +59,19 @@ class Api {
   }
 
   addCard(data) {
-    return fetch(`${this._baseUrl}/cards`, {
+    return this._request('/cards', {
       method: 'POST',
-      headers: this._headers,
       body: JSON.stringify({
         name: data.name,
         link: data.link
       })
-    }).then((res) => this._checkResponse(res));
+    });
   }
 
   changeLikeStatus(id, isLiked) {
-    return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-      method: isLiked ? 'DELETE' : 'PUT',
-      headers: this._headers
-    }).then((res) => this._checkResponse(res));
+    return this._request(`/cards/${id}/likes`, {
+      method: isLiked ? 'DELETE' : 'PUT'
+    });
   }
 
   getAppInfo() {
